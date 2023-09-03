@@ -1,3 +1,9 @@
+package process;
+
+class pro{
+	
+}
+
 /*
  
 	下記がコンソールに出力されるように作成してください
