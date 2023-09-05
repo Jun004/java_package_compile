@@ -1,3 +1,21 @@
+package process;
+
+public class Theme2_process{
+	
+	private String jp;
+	
+	public void setJp(String jp) {
+		this.jp = jp;
+		
+		if(jp == null) {
+			System.out.println("値を入力してください");
+		} else {
+			this.jp = jp;
+			System.out.println(this.jp);
+		}
+	}
+}
+
 /*
  
 	下記がコンソールに出力されるように作成してください

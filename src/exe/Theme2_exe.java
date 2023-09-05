@@ -1,7 +1,15 @@
-package process;
+package exe;
 
-class pro{
+import process.Theme2_process;
+
+public class Theme2_exe {
 	
+	public static void main(String[] args) {
+		Theme2_process Theme2 = new Theme2_process();
+		Theme2.setJp("こんにちは！ここは日本です！");
+		Theme2.setJp("この寿司はうまい");
+		Theme2.setJp("寿司は和食です");
+	}
 }
 
 /*
