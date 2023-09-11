@@ -9,6 +9,9 @@ public class Theme2_exe {
 		Theme2.setJp("こんにちは！ここは日本です！");
 		Theme2.setJp("この寿司はうまい");
 		Theme2.setJp("寿司は和食です");
+		
+		Theme2_process theme2Time = new Theme2_process();
+		theme2Time.setTime("nowtime");
 	}
 }
 

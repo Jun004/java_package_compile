@@ -1,8 +1,13 @@
 package process;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Theme2_process{
 	
-	private String jp;
+	String jp;
+	
+	String time;
 	
 	public void setJp(String jp) {
 		this.jp = jp;
@@ -13,6 +18,14 @@ public class Theme2_process{
 			this.jp = jp;
 			System.out.println(this.jp);
 		}
+	}
+	public void setTime(String time) {
+		this.time = time;
+		
+		LocalDateTime nowTime = LocalDateTime.now();
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd H:m:s");
+		time = dtf.format(nowTime);
+		System.out.println(time);
 	}
 }
 
