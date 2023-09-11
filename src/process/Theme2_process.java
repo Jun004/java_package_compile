@@ -23,7 +23,7 @@ public class Theme2_process{
 		this.time = time;
 		
 		LocalDateTime nowTime = LocalDateTime.now();
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd H:m:s");
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd H:m:s");
 		time = dtf.format(nowTime);
 		System.out.println(time);
 	}
