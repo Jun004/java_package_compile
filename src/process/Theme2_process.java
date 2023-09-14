@@ -1,31 +1,40 @@
 package process;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 public class Theme2_process{
 	
-	String jp;
+	private String jp;
+	private String jp1;
+	private String jp2;
+	private String[] jpS = {jp, jp1, jp2};
 	
-	String time;
+	private String time;
 	
-	public void setJp(String jp) {
-		this.jp = jp;
-		
-		if(jp == null) {
+	public void setJp(String jp, String jp1, String jp2) {
+		if(Objects.isNull(jpS)) {
 			System.out.println("値を入力してください");
-		} else {
-			this.jp = jp;
-			System.out.println(this.jp);
 		}
+		this.jp = jp;
+		this.jp1 = jp1;
+		this.jp2 = jp2;
 	}
 	public void setTime(String time) {
 		this.time = time;
-		
-		LocalDateTime nowTime = LocalDateTime.now();
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd H:m:s");
-		time = dtf.format(nowTime);
-		System.out.println(time);
+	}
+	
+	public String getJp(){
+		return this.jp;
+	}
+	public String getJp1(){
+		return this.jp1;
+	}
+	public String getJp2(){
+		return this.jp2;
+	}
+	
+	public String getTime(){
+		return this.time;
 	}
 }
 

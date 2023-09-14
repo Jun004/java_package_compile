@@ -26,12 +26,15 @@ public class Theme2 {
 	public static void main(String[] args) {
 		lion l = new lion();
 		l.setAnimal("ライオン", 2.1, 80);
-		String lionName = l.getAniStr();
+		/*String lionName = l.getAniStr();
 		double lionHeight = l.getAniHeight();
 		int lionSpeed = l.getAniSpeed();
 		System.out.println("動物名 : " + lionName);
 		System.out.println("体長 : " + lionHeight + "m");
-		System.out.println("速度 : " + lionSpeed + "km/h");
+		System.out.println("速度 : " + lionSpeed + "km/h");*/
+		System.out.println("動物名 : " + l.animalStr);
+		System.out.println("体長 : " + l.animalHeight + "m");
+		System.out.println("速度 : " + l.animalSpeed + "km/h");
 	}
 }
 /*

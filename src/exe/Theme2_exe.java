@@ -1,17 +1,29 @@
 package exe;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import process.Theme2_process;
 
 public class Theme2_exe {
 	
 	public static void main(String[] args) {
 		Theme2_process Theme2 = new Theme2_process();
-		Theme2.setJp("こんにちは！ここは日本です！");
-		Theme2.setJp("この寿司はうまい");
-		Theme2.setJp("寿司は和食です");
+		Theme2.setJp("こんにちは！ここは日本です！","この寿司はうまい","寿司は和食です");
+		String jpNa = Theme2.getJp();
+		String jpSu = Theme2.getJp1();
+		String jpFo = Theme2.getJp2();
+		System.out.println(jpNa);
+		System.out.println(jpSu);
+		System.out.println(jpFo);
 		
-		Theme2_process theme2Time = new Theme2_process();
-		theme2Time.setTime("nowtime");
+		LocalDateTime nowTime = LocalDateTime.now();
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd H:m:s");
+		String formatNowTime = dtf.format(nowTime);
+		Theme2_process Theme2_1 = new Theme2_process();
+		Theme2_1.setTime(formatNowTime);
+		String now = Theme2_1.getTime();
+		System.out.println(now);
 	}
 }
 
