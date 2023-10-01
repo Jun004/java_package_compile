@@ -36,5 +36,12 @@
 	速度：50km/h
 	学名：不明
 
-  
+ 
   */
+/*public void anim() {
+		
+		System.out.println("動物名" + this.name);
+		System.out.println("体長" + this.bodyL);
+		System.out.println("速度" + this.speed);
+		System.out.println("学名" + this.scName);
+	}*/
