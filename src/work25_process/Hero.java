@@ -1,6 +1,15 @@
 package work25_process;
 
 public class Hero extends SuperHero {
+
+	// name
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getName() {
+		return name;
+	}
+	
 	// hp
 	public void setHp(int hp) {
 		this.hp = hp;

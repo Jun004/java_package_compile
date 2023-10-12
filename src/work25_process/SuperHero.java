@@ -9,7 +9,7 @@ public class SuperHero {
 	int def;
 	
 	// name
-	public void setName(String name) {
+	public void setName(String shname) {
 		this.name = "ヒーロー";
 	}
 	public String getName() {
@@ -17,40 +17,40 @@ public class SuperHero {
 	}
 	
 	// hp
-	public void setHp(int hp) {
-		this.hp = hp;
+	public void setHp(int shhp) {
+		this.hp = 800;
 	}
 	public int getHp() {
 		return hp;
 	}
 	
 	// mp
-	public void setMp(int mp) {
-		this.mp = mp;
+	public void setMp(int shmp) {
+		this.mp = 400;
 	}
-	public int getmp() {
+	public int getMp() {
 		return mp;
 	}
 	
 	// atk
-	public void setAtk(int atk) {
-		this.atk = atk;
+	public void setAtk(int shatk) {
+		this.atk = 300;
 	}
 	public int getAtk() {
 		return atk;
 	}
 	
 	// speed
-	public void setSpeed(int speed) {
-		this.speed = speed;
+	public void setSpeed(int shspeed) {
+		this.speed = 900;
 	}
 	public int getSpeed() {
 		return speed;
 	}
 	
 	// def
-	public void setDef(int def) {
-		this.def = def;
+	public void setDef(int shdef) {
+		this.def = 50;
 	}
 	public int getDef() {
 		return def;
