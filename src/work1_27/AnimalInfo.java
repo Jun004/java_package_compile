@@ -1,4 +1,4 @@
-package object;
+package work1_27;
 
 public class AnimalInfo {
 	private String name;
