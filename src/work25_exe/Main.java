@@ -5,13 +5,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 import work25_process.Hero;
-import work25_process.SuperHero;
 
 public class Main {
 	
 	public static void main(String[] args) {
 		// インスタンスの生成
-		SuperHero superhero = new SuperHero();
 		Hero hero = new Hero();
 		
 		String name = "";
@@ -27,7 +25,7 @@ public class Main {
 			if(Objects.isNull(name)) {
 				System.out.println("名前を入力してください");
 				i = 0;
-				continue;
+				
 			} else {
 				scan.close();
 				i = 1;

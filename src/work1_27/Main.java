@@ -4,29 +4,33 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
-	
+
 	public static void main(String args[]) {
 		String animal = "";
 		int l = 0;
+		String[] animals = animal.split(":|,");
 		
 		while(l == 0) {
 			// コンソール入力
 			Scanner scan = new Scanner(System.in);
 			animal = scan.nextLine();
 			
+			// :と,で分割し、それぞれを一次元配列へ格納
+			animals = animal.split(":|,");
 			// nullチェック
-			if(Objects.isNull(animal)) {
-				System.out.println("名前を入力してください");
+			if(Objects.isNull(animals)) {
+				System.out.println("情報を入力してください");
 				l = 0;
-				
+			
+			// 要素数によって条件分岐
+			} else if(animals.length % 3 != 0) {
+				System.out.println("動物名とそれに対する情報２つを入力してください");
+				l = 0;
 			} else {
 				scan.close();
 				l = 1;
 			}
 		}
-		
-		// :と,で分割し、それぞれを一次元配列へ格納
-		String[] animals = animal.split(":|,");
 		
 		// 二次元配列の初期化
 		String[][] line = new String[6][3];
@@ -71,12 +75,38 @@ public class Main {
 			String gSpeed = ani.getSpeed();
 			System.out.println("速度：" + gSpeed + "km/h");
 			
-			ani.setScName(animalsInfo[i]);
-			String gScName = ani.getScName();
-			System.out.println("学名：" + gScName);
-			
-			
+			switch(line[i][0]) {
+			case "ライオン":
+				ani.setScName(animalsInfo[0]);
+				String nameL = ani.getScName();
+				System.out.println("学名：" + nameL);
+				break;
+			case "ゾウ":
+				ani.setScName(animalsInfo[1]);
+				String nameE = ani.getScName();
+				System.out.println("学名：" + nameE);
+				break;
+			case "パンダ":
+				ani.setScName(animalsInfo[2]);
+				String nameP = ani.getScName();
+				System.out.println("学名：" + nameP);
+				break;
+			case "チンパンジー":
+				ani.setScName(animalsInfo[3]);
+				String nameC = ani.getScName();
+				System.out.println("学名：" + nameC);
+				break;
+			case "シマウマ":
+				ani.setScName(animalsInfo[4]);
+				String nameZ = ani.getScName();
+				System.out.println("学名：" + nameZ);
+				break;
+			default:
+				ani.setScName(animalsInfo[5]);
+				String gScName = ani.getScName();
+				System.out.println("学名：" + gScName);
+				break;
+			}
 		}
-		
 	}
 }
